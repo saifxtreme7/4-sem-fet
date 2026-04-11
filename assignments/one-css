@@ -1,1 +1,90 @@
-hiu
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio</title>
+
+  <style>
+    body {
+      background-color: tomato;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      
+      background-color: white;
+      border: 2px solid #3b82f6;
+      width: fit-content;
+      margin: auto;
+      padding: 15px 30px;
+      border-radius: 50px;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      color: black;
+      font-weight:high;
+      margin-top: 15px;
+    }
+
+    h3 {
+     
+      color:DodgerBlue; 
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+
+    p {
+      width: 80%;
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 1.6;
+      color:black; 
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: DodgerBlue;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    a:hover {
+      background-color: white;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>MUHAMMAD SAIFUDDEEN</h1>
+
+  <h2>Computer Science Engineering Student</h2>
+
+  <h3>Mission Statement</h3>
+  <p>
+    I aim to become a skilled software engineer by building strong fundamentals
+    in programming and problem solving.
+  </p>
+
+  <h3>About Me</h3>
+  <p>
+    I am in 2<sup>nd</sup> year of engineering and I am a computer science student.
+  </p>
+
+  <h3>Tech Stack</h3>
+  <p>
+    Java, C, HTML, SQL, Data Structures, Algorithms
+  </p>
+
+  <a href="https://github.com/saifxtreme7">GitHub Profile</a>
+
+  <a href="https://github.com/saifxtreme7/4-sem-fet">Home Page</a>
+
+</body>
+</html>
