@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled Layer Switch</title>
 
+    <style>
+
+        /* Page */
+        body{
+            font-family: Arial;
+            background:#f2f2f2;
+            text-align:center;
+            padding:30px;
+        }
+
+        /* Heading */
+        h2{
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        /* Buttons */
+        button{
+            padding:10px 20px;
+            margin:5px;
+            border:none;
+            border-radius:8px;
+            background:#333;
+            color:white;
+            font-size:16px;
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        /* Button hover */
+        button:hover{
+            background:#555;
+            transform:scale(1.05);
+        }
+
+        /* Main box */
+        .box{
+            width:350px;
+            height:180px;
+            border-radius:15px;
+            border:3px solid #222;
+
+            position:relative;
+
+            margin:20px auto;
+
+            overflow:hidden;
+
+            box-shadow:0px 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* All layers */
+        .layer{
+            position:absolute;
+
+            width:100%;
+            height:100%;
+
+            display:none;
+
+            color:white;
+            font-size:28px;
+            font-weight:bold;
+
+            justify-content:center;
+            align-items:center;
+
+            transition:0.5s;
+        }
+
+        /* Layer colors */
+        #red{
+            background:linear-gradient(to right, #ff4b2b, #ff416c);
+        }
+
+        #yellow{
+            background:linear-gradient(to right, #f7971e, #ffd200);
+        }
+
+        #green{
+            background:linear-gradient(to right, #11998e, #38ef7d);
+        }
+
+        /* Show layer */
+        .show{
+            display:flex;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Beautiful Layer Switcher</h2>
+
+    <!-- Buttons -->
+    <button onclick="openLayer('red')">Red</button>
+
+    <button onclick="openLayer('yellow')">Yellow</button>
+
+    <button onclick="openLayer('green')">Green</button>
+
+    <!-- Layer Box -->
+    <div class="box">
+
+        <div id="red" class="layer show">
+            RED LAYER
+        </div>
+
+        <div id="yellow" class="layer">
+            YELLOW LAYER
+        </div>
+
+        <div id="green" class="layer">
+            GREEN LAYER
+        </div>
+
+    </div>
+
+    <script>
+
+        function openLayer(id){
+
+            /* Get all layers */
+            let allLayers = document.getElementsByClassName("layer");
+
+            /* Hide all */
+            for(let i=0; i<allLayers.length; i++){
+
+                allLayers[i].classList.remove("show");
+
+            }
+
+            /* Show selected */
+            document.getElementById(id).classList.add("show");
+
+        }
+
+    </script>
+
+</body>
+</html>
