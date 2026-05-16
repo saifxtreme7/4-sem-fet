@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Validation</title>
+
+    <style>
+
+        body{
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            font-family: Arial;
+            text-align: center;
+            padding-top: 120px;
+        }
+
+        .container{
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1{
+            color: darkblue;
+        }
+
+        button{
+            padding: 12px 25px;
+            background: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: navy;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Age Validation 🎂</h1>
+
+        <p>
+            Click the button to check eligibility
+        </p>
+
+        <button onclick="checkAge()">
+            Check Age
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+        function checkAge(){
+
+            let age =
+            prompt("Enter Your Age");
+
+            if(age >= 18){
+
+                alert("You are eligible");
+
+                document.getElementById("result").innerHTML =
+                "✅ Eligible for Voting";
+
+                document.getElementById("result").style.color =
+                "green";
+
+            }
+
+            else{
+
+                alert("You are not eligible");
+
+                document.getElementById("result").innerHTML =
+                "❌ Not Eligible for Voting";
+
+                document.getElementById("result").style.color =
+                "red";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
