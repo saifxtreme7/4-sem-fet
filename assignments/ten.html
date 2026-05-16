@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Selection</title>
+
+    <style>
+
+        body{
+            background: linear-gradient(to right, #89f7fe, #66a6ff);
+            font-family: Arial;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container{
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1{
+            color: darkblue;
+        }
+
+        select{
+            width: 250px;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        button{
+            padding: 10px 20px;
+            background: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: navy;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: darkgreen;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Course Selection 📘</h1>
+
+        <!-- Pull Down Menu -->
+
+        <label>Select Department:</label>
+
+        <br>
+
+        <select id="department">
+
+            <option>CSE</option>
+            <option>ISE</option>
+            <option>ECE</option>
+            <option>MECH</option>
+
+        </select>
+
+        <br>
+
+        <!-- List Box -->
+
+        <label>Select Skill:</label>
+
+        <br>
+
+        <select id="skill" size="4">
+
+            <option>Java</option>
+            <option>HTML</option>
+            <option>SQL</option>
+            <option>Python</option>
+
+        </select>
+
+        <br><br>
+
+        <button id="showBtn">
+            Show Selection
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("showBtn")
+        .addEventListener("click", function(){
+
+            let dept =
+            document.getElementById("department").value;
+
+            let skillBox =
+            document.getElementById("skill");
+
+            let skill =
+            skillBox.options[skillBox.selectedIndex].text;
+
+            document.getElementById("result").innerHTML =
+            "Department: " + dept +
+            "<br>Skill: " + skill;
+
+        });
+
+    </script>
+
+</body>
+</html>
